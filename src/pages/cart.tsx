@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {VscError} from 'react-icons/vsc';
 import CartItem from '../components/cart-item';
+import {Link} from 'react-router-dom';
 const cartItems = [
    {
     productId: "abcdef",
@@ -45,10 +46,9 @@ useEffect(() => {
     <div className="cart">
       <main>
 
-      {
-        cartItems.map((i, idx)=> (
+      {cartItems.length > 0 ? cartItems.map((i, idx)=> (
         <CartItem key= {idx} cartItem={i}/>
-        ))}
+        )) : <h1>No Items Added</h1>}
 
         </main>
         <aside>
@@ -81,7 +81,9 @@ Discount : <em> ₹ {discount} </em>
 
 ) )}
 
-
+{
+  cartItems.length > 0 && <Link to="/shipping">Checkout</Link>
+}
 
         </aside>
      

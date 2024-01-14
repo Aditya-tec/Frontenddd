@@ -29,12 +29,13 @@ export const CartItem = ({cartItem}: CartItemProps) => {
               <button>-</button>
               <p>{quantity}</p>
               <button>+</button>
-              <button>Remove</button>
+             
           </div>
-      </div>
-      <button>
+          <button>
 <FaTrash/>
-          </button></>
+          </button>
+      </div>
+      </>
   );
 };
 export default CartItem;
