@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 
-const user = {_id: "gfg" , role:"admin"};
+const user = {_id: "" , role:""};
 
 
 export const Header = () => {
